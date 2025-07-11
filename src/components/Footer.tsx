@@ -1,8 +1,10 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { useVisitorCount } from '../hooks/useVisitorCount';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+  const visitorCount = useVisitorCount();
 
   const quickLinks = [
     { name: 'About Us', href: '#' },
@@ -134,6 +136,9 @@ const Footer: React.FC = () => {
             <div className="text-center md:text-right">
               <p className="text-gray-400 text-sm">
                 © {currentYear} OUR KANDUKUR. All rights reserved.
+              </p>
+              <p className="text-gray-500 text-xs mt-1">
+                Visitors: {visitorCount.toLocaleString()}
               </p>
               <p className="text-gray-500 text-xs mt-1">
                 Empowering students • Building futures • Creating opportunities

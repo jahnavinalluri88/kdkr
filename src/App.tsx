@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { AuthProvider } from './contexts/AuthContext';
 import AnnouncementBanner from './components/AnnouncementBanner';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -39,14 +40,16 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <AnnouncementBanner />
-      <Header currentSection={currentSection} setCurrentSection={setCurrentSection} />
-      <main>
-        {renderSection()}
-      </main>
-      <Footer />
-    </div>
+    <AuthProvider>
+      <div className="min-h-screen bg-gray-50">
+        <AnnouncementBanner />
+        <Header currentSection={currentSection} setCurrentSection={setCurrentSection} />
+        <main>
+          {renderSection()}
+        </main>
+        <Footer />
+      </div>
+    </AuthProvider>
   );
 }
 
