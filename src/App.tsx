@@ -16,7 +16,7 @@ function App() {
       case 'home':
         return (
           <>
-            <Hero />
+            <Hero setCurrentSection={setCurrentSection} />
             <Opportunities />
           </>
         );
@@ -31,7 +31,7 @@ function App() {
       default:
         return (
           <>
-            <Hero />
+            <Hero setCurrentSection={setCurrentSection} />
             <Opportunities />
           </>
         );

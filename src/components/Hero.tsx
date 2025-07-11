@@ -1,7 +1,11 @@
 import React from 'react';
 import { Brain, DollarSign, Users, ChevronRight } from 'lucide-react';
 
-const Hero: React.FC = () => {
+interface HeroProps {
+  setCurrentSection: (section: string) => void;
+}
+
+const Hero: React.FC<HeroProps> = ({ setCurrentSection }) => {
   const pillars = [
     {
       icon: Brain,
@@ -35,7 +39,10 @@ const Hero: React.FC = () => {
             tech seminars, webinars, and job opportunities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold btn-3d neon-glow flex items-center justify-center gap-2">
+            <button 
+              onClick={() => setCurrentSection('opportunities')}
+              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold btn-3d neon-glow flex items-center justify-center gap-2"
+            >
               Explore Opportunities
               <ChevronRight className="h-5 w-5" />
             </button>
