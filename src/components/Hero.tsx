@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16 slide-in-up">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 float-animation">
-            Welcome to <span className="text-red-500 red-neon-glow">OUR KANDUKUR</span>
+            Welcome to <span className="text-yellow-400 unique-3d-text">OUR KANDUKUR</span>
           </h1>
           <p className="text-xl md:text-2xl text-blue-200 mb-8 max-w-4xl mx-auto bounce-in">
             Empowering students through comprehensive support in internships, workshops, hackathons, 
